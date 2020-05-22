@@ -1,0 +1,32 @@
+{
+  "name": "@sc/vue-ui-h5",
+  "version": "0.3.4",
+  "description": "UI",
+  "license": "ISC",
+  "main": "lib/index.common.js",
+  "style": "lib/themes/theme-default.css",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./ --fix"
+  },
+  "dependencies": {
+    "deepmerge": "^1.2.0",
+    "lodash": "^4.17.15",
+    "normalize-wheel": "^1.0.1",
+    "vue-count-to": "^1.0.13",
+    "vue-router": "^3.0.6"
+  },
+  "devDependencies": {},
+  "maintainers": [
+    {
+      "name": "",
+      "mail": ""
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@t-gitlab.smartcinema.com.cn:node/v-ui.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.smartcinema.com.cn"
+  }
+}

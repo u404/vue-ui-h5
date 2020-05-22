@@ -1,0 +1,39 @@
+@import "../common/var";
+@import "../common/mixins";
+
+.h5-call-app-banner {
+  height: rem(48);
+  background: rgba(0, 0, 0, 0.66);
+  @include flex;
+  .logo {
+    flex: 0 0 auto;
+    margin-left: rem(9);
+    width: rem(36);
+    height: rem(36);
+    background: url($logo) center no-repeat;
+    background-size: contain;
+  }
+  .desc {
+    flex: 1 1 auto;
+    margin: 0 rem(5);
+    font-size: rem(14);
+    line-height: rem(20);
+    color: #999999;
+  }
+  .app-btn {
+    margin-right: rem(13);
+    width: rem(76);
+    height: rem(26);
+    background: linear-gradient(
+      140deg,
+      rgba(232, 191, 143, 1) 0%,
+      rgba(204, 147, 97, 1) 100%
+    );
+    border-radius: 3px;
+    @include flex($jus: center);
+    font-size: rem(14);
+    line-height: rem(20);
+    color: #40373e;
+    font-weight: 500;
+  }
+}

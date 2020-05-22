@@ -1,0 +1,13 @@
+@import "../common/var";
+@import "../common/mixins";
+
+.h5-loading-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000 url(https://g.smartcinema.com.cn/images/685b6372882e43d3bf14991a48fe5734-259-200.gif) center no-repeat;
+  background-size: getRem(259) auto;
+  z-index: 10000;
+}

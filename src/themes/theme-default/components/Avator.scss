@@ -1,0 +1,142 @@
+@import "../common/var";
+@import "../common/mixins";
+
+@mixin borderStyle() {
+  @for $type from 0 through 4 {
+    @for $size from 1 through 5 {
+      &.h5-avator-#{$type}-#{$size} {
+        @if ($type == 0 or $type == 3) {
+          .h5-avator-border {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @if ($size > 2) {
+              border-width: 2px;
+            } @else {
+              border-width: 1px;
+            }
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+          }
+        } @else {
+          $t: $type;
+          @if ($t == 1) {
+            $t: sliver;
+          } @else if ($t > 1) {
+            $t: gold;
+          }
+          background: url(#{$imagePath}/Avator/bg-avator-#{$t}-#{$size}.png)
+            center
+            no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+@mixin corner() {
+  @for $type from 0 through 4 {
+    @for $size from 1 through 5 {
+      @if ($type == 0 or $type == 3) {
+      } @else {
+        &.h5-avator-#{$type}-#{$size} {
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: rem(0);
+            right: rem(0);
+            background: url(#{$imagePath}/Avator/icon-corner-#{$type}.png)
+              center
+              no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin size() {
+  @for $type from 0 through 4 {
+    &.h5-avator-#{$type}-5 {
+      width: rem(88);
+      height: rem(88);
+      i {
+        border-width: rem(4);
+      }
+      &:after {
+        width: rem(28);
+        height: rem(28);
+      }
+    }
+    &.h5-avator-#{$type}-4 {
+      width: rem(68);
+      height: rem(68);
+      i {
+        border-width: rem(4);
+      }
+      &:after {
+        width: rem(22);
+        height: rem(22);
+      }
+    }
+    &.h5-avator-#{$type}-3 {
+      width: rem(48);
+      height: rem(48);
+      i {
+        border-width: rem(3);
+      }
+      &:after {
+        width: rem(18);
+        height: rem(18);
+      }
+    }
+    &.h5-avator-#{$type}-2 {
+      width: rem(34);
+      height: rem(34);
+      i {
+        border-width: rem(2);
+      }
+      &:after {
+        width: rem(12);
+        height: rem(12);
+      }
+    }
+    &.h5-avator-#{$type}-1 {
+      width: rem(24);
+      height: rem(24);
+      i {
+        border-width: rem(2);
+      }
+      &:after {
+        width: rem(8);
+        height: rem(8);
+      }
+    }
+  }
+}
+
+.h5-avator {
+  position: relative;
+  @include flex($jus: center);
+  @include borderStyle();
+
+  @include corner();
+
+  @include size();
+
+  i {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: none center no-repeat;
+    background-size: cover;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+  }
+}

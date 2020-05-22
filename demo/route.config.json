@@ -1,0 +1,11 @@
+{
+  "LoadingPanel": "/loading-panel",
+  "FailPanel": "/fail-panel",
+  "Loading": "/loading",
+  "Alert": "/alert",
+  "Transition": "/transition",
+  "CollapseTransition": "/collapse-transition",
+  "Avator": "/avator",
+  "Number": "/number",
+  "CallAppBanner": "/call-app-banner"
+}

@@ -1,0 +1,38 @@
+@import "../common/var";
+@import "../common/mixins";
+
+.h5-fail-panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #000 url('#{$imagePath}/bg-error.png') no-repeat center top;
+  background-size: 100% auto;
+
+  .icon {
+    background: url('#{$imagePath}/icon-error.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: getRem375(170);
+    height: getRem375(170);
+    margin-bottom: getRem375(10);
+  }
+
+  .info {
+    font-size: getRem375(18);
+    color: #999999;
+    line-height: getRem375(25);
+    margin-bottom: getRem375(27);
+  }
+
+  .btn {
+    background: url('#{$imagePath}/button-refresh.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: getRem375(64);
+    height: getRem375(30);
+  }
+}

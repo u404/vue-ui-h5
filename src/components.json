@@ -1,0 +1,11 @@
+{
+  "LoadingPanel": "@src/components/LoadingPanel/index.js",
+  "FailPanel": "@src/components/FailPanel/index.js",
+  "Loading": "@src/components/Loading/index.js",
+  "Alert": "@src/components/Alert/index.js",
+  "Transition": "@src/components/Transition/index.js",
+  "CollapseTransition": "@src/components/CollapseTransition/index.js",
+  "Avator": "@src/components/Avator/index.js",
+  "Number": "@src/components/Number/index.js",
+  "CallAppBanner": "@src/components/CallAppBanner/index.js"
+}

@@ -1,0 +1,41 @@
+@import "../common/var";
+@import "../common/mixins";
+
+.h5-loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include flex($jus: center);
+  .loading-main {
+    padding: rem(28);
+    border-radius: rem(20);
+    background: rgba(0, 0, 0, 0.7);
+    .loading-icon {
+      margin: 0 auto;
+      display: block;
+      width: rem(32);
+      height: rem(32);
+      background: url(#{$imagePath}/icon-loading.png) center no-repeat;
+      background-size: contain;
+      animation: spin 1s linear infinite;
+    }
+    &.has-tips {
+      .loading-tips {
+        margin-top: rem(10);
+        display: block;
+        text-align: center;
+        font-size: rem(12);
+        color: #fff;
+      }
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  }
+}

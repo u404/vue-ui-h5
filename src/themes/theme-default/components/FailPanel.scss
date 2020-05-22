@@ -1,0 +1,49 @@
+@import "../common/var";
+@import "../common/mixins";
+
+.h5-fail-panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #111111;
+  background-size: 100% auto;
+
+  .icon {
+    background: url("https://g.smartcinema.com.cn/images/9da24f8aa99544ffbe7ae9d29ac85847-340-340.png")
+      no-repeat center center;
+    background-size: 100% 100%;
+    width: getRem375(170);
+    height: getRem375(170);
+    margin-bottom: getRem375(10);
+  }
+
+  .info {
+    font-size: getRem375(18);
+    color: #999999;
+    line-height: getRem375(25);
+    margin-bottom: getRem375(27);
+  }
+
+  .btn {
+    width: getRem375(64);
+    height: getRem375(30);
+    background-image: linear-gradient(140deg, #fdf3bd 0%, #f3ce87 100%);
+    font-size: getRem375(14);
+    color: #594b34;
+    border-radius: getRem375(15);
+    font-weight: 600;
+    @include flex($jus: center);
+  }
+
+  &.type-2 {
+    .icon {
+      background-image: url("https://g.smartcinema.com.cn/images/1507ad359fc24ddd886a705ca0d9f279-340-340.png");
+    }
+  }
+}
